@@ -273,8 +273,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void ReadFile()
         {
-            string FileToRead = @"C:\Users\leonx\CaveDemo\Movement.txt";
-            
+            string FileToRead = Directory.GetCurrentDirectory() + "/Movement.txt";
+            //Debug.Log(FileToRead);
             string[] lines = File.ReadAllLines(FileToRead);
             movements = new Vector2[lines.Length];
             
